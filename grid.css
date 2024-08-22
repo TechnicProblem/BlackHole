@@ -1,0 +1,127 @@
+/*// Black hole, grid.css
+*/
+:root {
+  /* Change this to change the appearance of the hexaons */
+  --hex-width: 75px;
+  --hex-between: 10px;
+
+  /* Other hexagon dimentions */
+  --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
+  --hex-margin: calc(var(--hex-width) / 2);
+  --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
+  --hex-transition: all .2s ease;
+
+  /* Colors */
+  --color-hex-default: #BBB;
+  --color-hex-hover: #BBB;
+}
+
+/* Hexagons */
+.hexagon-container {
+  display: grid;
+  grid-template-columns: 75px 75px 75px 75px 75px 75px;
+  grid-auto-rows: calc(var(--hex-width) - 28.87px/2);
+  grid-auto-rows: 75px 75px 75px 75px 75px 75px;
+  grid-gap: var(--hex-between) var(--hex-between);
+  padding-bottom: var(--hex-border);
+  /*grid-template-areas:
+  '75px 75px 75px 75px 75px 75px 75px'
+  '75px 75px 75px 75px 75px 75px .'
+  '75px 75px 75px 75px 75px . .'
+  '75px 75px 75px 75px . . .'
+  '75px 75px 75px . . . .'
+  '75px 75px . . . . .'
+  '75px . . . . . . ';*/
+}
+.hexagon {
+  align-items: center;
+  background-color: var(--color-hex-default);
+  /*cursor: pointer;*/
+  display: flex;
+  fill: white;
+  height: var(--hex-height);
+  justify-content: center;
+  margin: var(--hex-border) 0;
+  position: relative;
+  transition: var(--hex-transition);
+  width: var(--hex-width);
+}
+
+.hexagon::after,
+.hexagon::before {
+  border-left: var(--hex-margin) solid transparent;
+  border-right: var(--hex-margin) solid transparent;
+  content: "";
+  left: 0;
+  position: absolute;
+  transition: var(--hex-transition);
+  width: 0;
+}
+.hexagon::after {
+  border-top: var(--hex-border) solid var(--color-hex-default);
+  top: 100%;
+  width: 0;
+}
+.hexagon::before {
+  border-bottom: var(--hex-border) solid var(--color-hex-default);
+  bottom: 100%;
+}
+
+/*.hexagon:hover {
+  background-color: var(--color-hex-hover);
+}
+.hexagon:hover::after,
+.hexagon:hover::before {
+  border-top-color: var(--color-hex-hover);
+  border-bottom-color: var(--color-hex-hover);
+  }*/
+
+.hexagon:nth-child(6n + 7),
+.hexagon:nth-child(6n + 8),
+.hexagon:nth-child(6n + 9),
+.hexagon:nth-child(6n + 10),
+.hexagon:nth-child(6n + 11),
+.hexagon:nth-child(6n + 12) {
+  margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2);
+}
+.hexagon:nth-child(6n + 13),
+.hexagon:nth-child(6n + 14),
+.hexagon:nth-child(6n + 15),
+.hexagon:nth-child(6n + 16),
+.hexagon:nth-child(6n + 17),
+.hexagon:nth-child(6n + 18) {
+  margin-left: 0;
+}
+.hexagon:nth-child(6n + 19),
+.hexagon:nth-child(6n + 20),
+.hexagon:nth-child(6n + 21),
+.hexagon:nth-child(6n + 22),
+.hexagon:nth-child(6n + 23),
+.hexagon:nth-child(6n + 24) {
+  margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2);
+}
+.hexagon:nth-child(6n + 25),
+.hexagon:nth-child(6n + 26),
+.hexagon:nth-child(6n + 27),
+.hexagon:nth-child(6n + 28),
+.hexagon:nth-child(6n + 29),
+.hexagon:nth-child(6n + 30) {
+  margin-left: 0;
+}
+.hexagon:nth-child(6n + 31),
+.hexagon:nth-child(6n + 32),
+.hexagon:nth-child(6n + 33),
+.hexagon:nth-child(6n + 34),
+.hexagon:nth-child(6n + 35),
+.hexagon:nth-child(6n + 36) {
+  margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2);
+}
+
+.hexagon > svg {
+  height: 75%;
+  transition: var(--hex-transition);
+}
+
+.hide {
+  visibility: hidden;
+}

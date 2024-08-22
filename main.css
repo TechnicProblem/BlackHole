@@ -1,0 +1,172 @@
+/*// Black hole, main.css
+// All code owned by TechnicProblem, © TechnicProblem 2020, All Rights Reserved
+// Contact me for usage of code, technicproblem@outlook.com
+// 2020-12-14
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap');
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  position: relative;
+}
+.container {
+  display: flex;
+}
+
+aside {
+  margin-left: 2rem;
+  width: 100%;
+}
+
+.alt {
+  background-color: #ccc;
+  padding: 3rem;
+  padding-right: 2rem;
+  margin: 1rem;
+
+}
+.alt h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  display: inline;
+
+}
+
+.greyalt {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*.greyalt button {
+  display: inline;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: 3px solid #fff;
+  border-radius: 1em;
+}*/
+
+.redalt {
+  background-color: #d95250;
+}
+
+.bluealt {
+  background-color: #66add4;
+}
+
+.disable {
+  pointer-events: none;
+  background-color: #ccc;
+}
+.altbutton {
+  margin-left: 1em;
+}
+
+.red {
+  background-color: #d95250;
+}
+
+.red::after {
+  border-top: var(--hex-border) solid #d95250;
+}
+
+.red::before {
+  border-bottom: var(--hex-border) solid #d95250;
+}
+
+.blue {
+  background-color: #66add4;
+}
+
+.blue::after {
+  border-top: var(--hex-border) solid #66add4;
+}
+
+.blue::before {
+  border-bottom: var(--hex-border) solid #66add4;
+}
+
+.end {
+  background-color: #000;
+}
+
+.end::after {
+  border-top: var(--hex-border) solid #000;
+}
+
+.end::before {
+  border-bottom: var(--hex-border) solid #000;
+}
+.semiend {
+  background-color: #333;
+  color: #333;
+}
+
+.semiend::after {
+  border-top: var(--hex-border) solid #333;
+}
+
+.semiend::before {
+  border-bottom: var(--hex-border) solid #333;
+}
+
+.removehide {
+  display: none;
+}
+
+.redtext {
+  color: #d95250;
+}
+
+.bluetext {
+  color: #66add4;
+}
+
+.footerdiv {
+  bottom:0;
+  background-color: #cdcdcd;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.75em;
+  right: 0.5em;
+  text-align: right;
+
+}
+
+.redhover:hover {
+  background-color: #d95250;
+}
+
+.redhover:hover::after {
+  border-top: var(--hex-border) solid #d95250;
+}
+
+.redhover:hover::before {
+  border-bottom: var(--hex-border) solid #d95250;
+}
+
+.bluehover:hover {
+  background-color: rgba(102, 173, 212, 0.9);
+}
+
+.bluehover:hover::after {
+  border-top: var(--hex-border) solid rgba(102, 173, 212, 0.9);
+}
+
+.bluehover:hover::before {
+  border-bottom: var(--hex-border) solid rgba(102, 173, 212, 0.9);
+}
+
+.instructions {
+  margin: 1rem;
+  padding-bottom: 3em;
+}
+
+@media (max-width:970px) {
+  .container {
+    display: block;
+  }
+}
